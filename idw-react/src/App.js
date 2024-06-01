@@ -4,7 +4,7 @@ import Nav from "./components/Nav";
 import AddAlojamientoForm from "./components/AddAlojamiento";
 import GetAlojamientos from "./components/GetAlojamientos";
 import Footer from "./components/Footer";
-// import Home from "./components/Home";
+import Home from "./components/Home";
 
 function App() {
   return (
