@@ -20,10 +20,12 @@ export default function Nav() {
               <li>
                 <Link to='nosotros'>Nosotros</Link>
               </li>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Acerca de</a></li>
-                <li><a href="propietarios.html">Propietarios</a></li>
-                <li><a href="contactos.html"> Contactos </a></li>
+                <li>
+                  <Link to="propietarios">Propietarios</Link>
+                  </li>
+                <li>
+                  <Link to="contactos"> Contactos </Link>
+                  </li>
             </ul>           
         </nav> 
             </header>
