@@ -13,12 +13,11 @@ function App() {
       <Nav/>
     </div>
     <Routes>
-          {/* <Route path="/" element={<Home/>}/> */}
+          {<Route path="/" element={<Home/>}/>}
           <Route path="/agregaralojamiento" element={<AddAlojamientoForm/>}/>
           <Route path="/alojamientos" element={<GetAlojamientos/>}/>
     </Routes>
     </BrowserRouter>
-    
   );
 }
 
