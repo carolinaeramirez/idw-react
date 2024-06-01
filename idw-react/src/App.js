@@ -5,6 +5,10 @@ import AddAlojamientoForm from "./components/AddAlojamiento";
 import GetAlojamientos from "./components/GetAlojamientos";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
+import AddTipoAlojamiento from "./components/AddTipoAlojamiento";
+import GetAlojamiento from "./components/GetTipoAlojamiento";
+import Home from "./pages/Home";
+
 
 function App() {
   return (
@@ -16,12 +20,12 @@ function App() {
     </div>
 
     <Routes>
-          {/* <Route path="/" element={<Home/>}/> */}
+          <Route path="/" element={<Home/>}/>
           <Route path="/agregaralojamiento" element={<AddAlojamientoForm/>}/>
-          <Route path="/alojamientos" element={<GetAlojamientos/>}/>
+          <Route path="/agregartipoalojamiento" element={<AddTipoAlojamiento/>}/>
+          <Route path="/vertipoalojamiento" element={<GetAlojamiento/>}/>          
     </Routes>
     </BrowserRouter>
-   
   );
 }
 

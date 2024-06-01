@@ -18,14 +18,14 @@ body{
     rgb(8, 105, 80)
   );
   width: 100%;
-  height: 30%;
+  height: 40%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   position: relative;
 }
 .nav-bar {
-  width: 60%;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -164,11 +164,21 @@ header .textos-header {
 }
 
 /* PAGINA HOME */
+
 .container-items {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+
   gap: 20px;
-  margin: 10px 30px 30px 20px;
+  width: 10%;
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;*/
+  margin: 10px 30px 30px 20px; 
+  /* padding: 10%; */
 }
 
 .item:hover {
@@ -200,6 +210,14 @@ header .textos-header {
   font-weight: 700px;
 }
 
+.container-btn{
+ 
+  display: flex;
+  justify-content: center;
+}
+.container-btn :hover{
+  transform: scale(1.2);
+}
 .btn {
   display: inline-block;
   background-color:  rgb(8, 105, 80);
@@ -212,7 +230,41 @@ header .textos-header {
   border-radius: 5%;
   box-shadow: 0 2px 2px 1px rgb(131, 126, 131);
 }
+/* componente getAlojamientos*/
+.container-items {
+  /* background-color: red; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
 
+.hotel-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+
+.hotel-title {
+  font-size: 1.5em;
+  margin: 0.5em 0;
+}
+
+.hotel-description,
+.hotel-price,
+.hotel-rooms,
+.hotel-bathrooms,
+.hotel-state {
+  margin: 0.5em 0;
+}
 /* PAGINA CONTACTOS */
 .bodycontacto {
   align-items: center;
