@@ -33,7 +33,8 @@ export default function GetTipoAlojamiento() {
                 <tbody>
                     {tipoAlojamiento.map((tipo, index) => (
                         <tr key={index}>
-                            <td>{tipo.descripcion}</td>
+                            <td>{tipo.Descripcion}</td>
+                            <td>{tipo.idTipoAlojamiento}</td>
                         </tr>
                     ))}
                 </tbody>
