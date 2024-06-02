@@ -1,17 +1,19 @@
 import React from 'react';
 import '../styles/estilos.css';
 import {Link} from 'react-router-dom';
+import {logo} from "../assets/img/logo.png";
+
 export default function Nav() {
   return (
     <div>
-          <header className="header">   
-      <div className="logo">
-        {/* <img src="../img/logo.png" alt="logo hospedog" >       */}
-  <div className="logo-text">
+          <header className={styles.header}>   
+      <div className={styles.logo}>
+        <img src={"../img/logo.png"} alt="logo hospedog" /> 
+  <div className={styles.logo-text}>
     <h2>Hospedajes Pet Friendly</h2>
   </div>
       </div>
-        <nav className="nav-bar">
+        <nav className={styles.nav-bar}>
          
             <ul>
               <li>
