@@ -1,12 +1,11 @@
 import React from "react";
 import "../styles/estilos.css";
-import Nav from "./Nav";
-import Footer from "./Footer";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 import GetAlojamientos from "../components/GetAlojamientos";
 export default function Home() {
   return (
     <div>
-      <Nav/>
 
   <section class="search-bar">
               <div class="search-bar-text">
@@ -34,7 +33,6 @@ export default function Home() {
               </form>
             </section>
       <GetAlojamientos />
-      <Footer/>
 
       <button>agregar alojamiento</button>
     </div>
