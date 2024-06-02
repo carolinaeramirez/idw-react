@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "../assets/img/imagenes.json";
 
 import cabaña from "../assets/img/cabaña.jpg";
 
 const GetAlojamientos = () => {
   const [alojamientos, setAlojamientos] = useState([]);
   const [error, setError] = useState("");
+  const [imagenes, setImagenes] = useState([]);
 
   const traerAlojamientos = async () => {
     try {
@@ -14,44 +16,45 @@ const GetAlojamientos = () => {
       );
       const datosArray = Array.isArray(response.data) ? response.data : [];
       setAlojamientos(datosArray);
-      console.log("informacion", datosArray);
     } catch (error) {
       setError("Error, no se recuperaron response");
     }
   };
 
-  useEffect(() => {
-    traerAlojamientos();
-  }, []);
-  console.log("array alojamientos:", alojamientos);
-  return (
-    // <div className="container-items">
+  const traerImagenes = async () => {
+    try {
+      const response = await fetch('../assets/img/imagenes.json');
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const jsonData = await response.json();
+      setImagenes(jsonData);
+    } catch (error) {
+      setError('Error fetching the data');
+      console.error('Error fetching the data:', error);
+    }
+  };
+ 
     
-    //     {alojamientos.map((lugar, index) => (
-    //       <div key={index}>
-    //         <img
-    //           src={"https://www.shutterstock.com/es/search/casas-de-campo"}
-    //           alt={`Imagen de ${lugar.Titulo}`}
-    //           className="hotel-image"
-    //         />
+  useEffect(() => {
 
-    //         <h2>{lugar.Titulo}</h2>
-    //         <p>{lugar.Descripcion}</p>
-    //         <h5>Precio por día: {lugar.PrecioPorDia}</h5>
-    //         <p>Dormitorios: {lugar.CantidadDormitorios}</p>
-    //         <p>Baños: {lugar.CantidadBanios}</p>
-    //         <p>Estado: {lugar.Estado}</p>
-    //       </div>
-    //     ))}
-    //   </div>
+    traerAlojamientos();
+    traerImagenes();
+  }, []);
+  return (
     <div className="container-items">
+<div className="Imagenes">
+      {error && <p>{error}</p>}
+      <ul>
+        {imagenes.map(item => (
+          <li key={item.id}>
+            {item.id}
+          </li>
+        ))}
+      </ul>
+    </div>
     {alojamientos.map((lugar, index) => (
       <div key={index} className="hotel-card">
-        <img
-          src={"https://picsum.photos/100"}
-          alt={`Imagen de ${lugar.Titulo}`}
-          className="hotel-image"
-        />
         <h2 className="hotel-title">{lugar.Titulo}</h2>
         <p className="hotel-description">{lugar.Descripcion}</p>
         <h5 className="hotel-price">Precio por día: {lugar.PrecioPorDia}</h5>
