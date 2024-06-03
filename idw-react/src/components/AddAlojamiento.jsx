@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-
-
 const AddAlojamientoForm = () => {
   const [nuevoAlojamiento, setNuevoAlojamiento] = useState({
     Titulo: "",
@@ -28,7 +26,10 @@ const AddAlojamientoForm = () => {
     e.preventDefault();
 
     axios
-      .post("http://localhost:3001/alojamiento/createAlojamiento", nuevoAlojamiento)
+      .post(
+        "http://localhost:3001/alojamiento/createAlojamiento",
+        nuevoAlojamiento
+      )
       .then((response) => {
         console.log("Alojamiento agregado:", response.data);
       })

@@ -39,7 +39,7 @@ export default function AddTipoAlojamiento() {
           onChange={handleChange}
         />
       </div>
-      <button type="submit">Agregar Tipo de Alojamiento</button>
+      <button type="submit" >Agregar Tipo de Alojamiento</button>
     </form>
   </div>;
 }

@@ -23,10 +23,20 @@ export default function Nav() {
                 <Link to='nosotros'>Nosotros</Link>
               </li>
                 <li>
-                  <Link to="propietarios">Propietarios</Link>
+                  <Link to="/propietarios">Propietarios</Link>
+                  </li>
+                  <li>
+                  <Link to="/vertipoalojamiento">Tipos Alojamientos</Link>
                   </li>
                 <li>
                   <Link to="contactos"> Contactos </Link>
+                  </li>
+                  <li>
+                  <Link to="/login"> 
+                  <div>
+                    <button className='btn'>Login</button>
+                  </div>
+                  </Link>
                   </li>
             </ul>           
         </nav> 
