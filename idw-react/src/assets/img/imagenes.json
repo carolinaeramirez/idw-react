@@ -1,11 +1,13 @@
+
+
+
 [
-    { "id": 1, "src": "../img/cabaña.jpg", "alt": "Image 1" },
-    { "id": 2, "src": "../img/cabaña1.jpg", "alt": "Image 2" },
-    { "id": 3, "src": "../img/casa.jpg", "alt": "Image 3" },
-    { "id": 5, "src": "../img/dpto.jpg", "alt": "Image 4" },
-    { "id": 5, "src": "../img/dpto1.jpg", "alt": "Image 5" },
-    { "id": 6, "src": "../img/hotel.jpg", "alt": "Image 6" },
-    { "id": 7, "src": "../img/hotel1.jpg", "alt": "Image 7" },
-    { "id": 8, "src": "../img/hotel2.jpg", "alt": "Image 8" },
-    { "id": 9, "src": "../img/hotel3.jpg", "alt": "Image 9" }
+    { "id": 1, "src": "../assets/img/cabaña.jpg", "alt": "Image 1", "name": "Cabaña" },
+    {
+      "id": 2,
+      "name": "Casa",
+      "src": "dpto.jpg",
+      "alt": "Casa con jardín"
+  }
+  
   ]
