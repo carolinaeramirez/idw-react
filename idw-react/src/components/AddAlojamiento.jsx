@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import '../styles/estilos.css';
+
 
 const AddAlojamientoForm = () => {
   const [nuevoAlojamiento, setNuevoAlojamiento] = useState({
@@ -42,7 +44,7 @@ const AddAlojamientoForm = () => {
   return (
     <form onSubmit={handleSubmit} className="form">
       <div>
-        <label>Título:</label>
+        <label>Título: </label>
         <input
           type="text"
           name="Titulo"
@@ -52,7 +54,7 @@ const AddAlojamientoForm = () => {
         />
       </div>
       <div>
-        <label>Descripción:</label>
+        <label>Descripción: </label>
         <textarea
           name="Descripcion"
           value={nuevoAlojamiento.Descripcion}
@@ -60,7 +62,7 @@ const AddAlojamientoForm = () => {
         />
       </div>
       <div>
-        <label>Latitud:</label>
+        <label>Latitud: </label>
         <input
           type="number"
           step="0.00000001"
@@ -71,7 +73,7 @@ const AddAlojamientoForm = () => {
         />
       </div>
       <div>
-        <label>Longitud:</label>
+        <label>Longitud: </label>
         <input
           type="number"
           step="0.00000001"
@@ -82,7 +84,7 @@ const AddAlojamientoForm = () => {
         />
       </div>
       <div>
-        <label>Precio Por Día:</label>
+        <label>Precio Por Día: </label>
         <input
           type="number"
           step="0.01"
@@ -93,7 +95,7 @@ const AddAlojamientoForm = () => {
         />
       </div>
       <div>
-        <label>Cantidad de Dormitorios:</label>
+        <label>Cantidad de Dormitorios: </label>
         <input
           type="number"
           name="CantidadDormitorios"
@@ -103,7 +105,7 @@ const AddAlojamientoForm = () => {
         />
       </div>
       <div>
-        <label>Cantidad de Baños:</label>
+        <label>Cantidad de Baños: </label>
         <input
           type="number"
           name="CantidadBanios"
@@ -113,7 +115,7 @@ const AddAlojamientoForm = () => {
         />
       </div>
       <div>
-        <label>Estado:</label>
+        <label>Estado: </label>
         <select
           name="Estado"
           value={nuevoAlojamiento.Estado}
@@ -125,14 +127,17 @@ const AddAlojamientoForm = () => {
         </select>
       </div>
       <div>
-        <label>Tipo de Alojamiento:</label>
+        <label>Tipo de Alojamiento: </label>
         <input
           type="number"
           name="TipoAlojamiento"
           value={nuevoAlojamiento.TipoAlojamiento}
           onChange={handleChange}
         />
-      </div>
+      </div> 
+      <p>(Seleccionar númericamente la opcion que corresponda:
+        1. Casas; 2. Departamento; 3. Cabaña; 4. Hotel; 5. Hostel; 6. Otros)
+      </p>
       <button type="submit" className="btn" > Agregar Alojamiento</button>
     </form>
   );

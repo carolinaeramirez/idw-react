@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import hospedaje from "../assets/img/hotel1.jpg";
+
 
 const GetAlojamientos = () => {
   const [alojamientos, setAlojamientos] = useState([]);
@@ -24,10 +24,21 @@ const GetAlojamientos = () => {
 
   return (
     <div className="container-items">
-      
       {alojamientos.map((lugar, index) => (
         <div key={index} className="hotel-card" >
-          <img src= {hospedaje} alt="imagen-hospedaje" className="hotel-image"/> 
+          <img src="https://picsum.photos/seed/picsum/250" alt="Imagen"></img>
+          {lugar.descripcion === "cabaña" || lugar.descripcion === "CABAÑA" ? (
+          <img src="../assets/img/cabaña.jpg" alt="Imagen" />
+          ) : null}
+          {lugar.descripcion === "hotel" || lugar.descripcion === "HOTEL" ? (
+            <img src="../assets/img/hotel2.jpg" alt="Imagen" />
+          ) : null}
+          {lugar.descripcion === "departamento" || lugar.descripcion === "DEPARTAMENTO" ? (
+            <img src="../assets/img/dpto.jpg" alt="Imagen" />
+          ) : null}
+          {lugar.descripcion === "casa" || lugar.descripcion === "CASA" ? (
+            <img src="../assets/img/casa.jpg" alt="Imagen" />
+          ) : null}
           <h2 className="hotel-title">{lugar.Titulo}</h2>
           <p className="hotel-description">{lugar.Descripcion}</p>
           <h5 className="hotel-price">Precio por día: {lugar.PrecioPorDia}</h5>

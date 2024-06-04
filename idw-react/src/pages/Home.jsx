@@ -1,7 +1,8 @@
 import React from "react";
 import "../styles/estilos.css";
-
 import GetAlojamientos from "../components/GetAlojamientos";
+
+
 export default function Home() {
   return (
     <div>
@@ -52,7 +53,7 @@ export default function Home() {
           </button>
         </form>
       </section>
-      <GetAlojamientos />
-    </div>
+      <GetAlojamientos/>  
+  </div>
   );
 }
