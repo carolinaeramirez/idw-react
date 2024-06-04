@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
-import imagenes from "../assets/img/imagenes.json";
+import hospedaje from "../assets/img/hotel1.jpg";
 
 const GetAlojamientos = () => {
   const [alojamientos, setAlojamientos] = useState([]);
@@ -22,19 +21,13 @@ const GetAlojamientos = () => {
   useEffect(() => {
     traerAlojamientos();
   }, []);
-  console.log(imagenes)
+
   return (
     <div className="container-items">
-      <div className="Imagenes">
-        {error && <p>{error}</p>}
-        <ul>
-          {imagenes.map((item) => (
-            <li key={item.id}><img src={item.src} alt={item.alt} /></li>
-          ))}
-        </ul>
-      </div>
+      
       {alojamientos.map((lugar, index) => (
-        <div key={index} className="hotel-card">
+        <div key={index} className="hotel-card" >
+          <img src= {hospedaje} alt="imagen-hospedaje" className="hotel-image"/> 
           <h2 className="hotel-title">{lugar.Titulo}</h2>
           <p className="hotel-description">{lugar.Descripcion}</p>
           <h5 className="hotel-price">Precio por día: {lugar.PrecioPorDia}</h5>

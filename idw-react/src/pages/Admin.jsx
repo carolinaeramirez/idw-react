@@ -1,5 +1,6 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function Admin() {
     const navigate=useNavigate();
@@ -13,27 +14,23 @@ export default function Admin() {
     }
   return (
     <div className="login-container">
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
+      <h3>Login - Ingreso Usuarios</h3>
+      <form onSubmit={handleSubmit} className='form'>
         <div>
-          <label htmlFor="username">Username:</label>
+          <label htmlFor="username">Username: </label>
           <input
             type="text"
             id="username"
-            // value={username}
-            // onChange={(e) => setUsername(e.target.value)}
           />
         </div>
         <div>
-          <label htmlFor="password">Password:</label>
+          <label htmlFor="password">Password:    </label>
           <input
             type="password"
             id="password"
-            // value={password}
-            // onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button onClick={handleClick}>Login</button>
+        <button onClick={handleClick} className='btn'>Login</button>
       </form>
     </div>
   )

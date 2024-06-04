@@ -53,8 +53,6 @@ export default function Home() {
         </form>
       </section>
       <GetAlojamientos />
-
-      <button>agregar alojamiento</button>
     </div>
   );
 }
