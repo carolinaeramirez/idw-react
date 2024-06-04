@@ -68,18 +68,15 @@ export default function GetTipoAlojamiento() {
             <table className="table">
                 <thead className="tableTitle">
                     <tr className="tr">
-                        <th>Tipo de Alojamientos cargados</th> 
-                         <th>ACCIONES</th>
+                        <th>Tipo de Alojamientos cargados   </th> 
                     </tr>
                     <tr className="tr">
-                      
                     </tr>
                 </thead>
                 <tbody>
                     {tipoAlojamiento.map((tipo, index) => (
                         <tr key={index}>
                             <td>{tipo.Descripcion}</td>
-                            {/* <td>{tipo.idTipoAlojamiento}</td> */}
                             <td>
                         <button onClick={editar}>editar</button>
                         <button onClick={() => eliminar(tipo.idTipoAlojamiento)}>eliminar</button>

@@ -7,8 +7,9 @@ import AddTipoAlojamiento from "./components/AddTipoAlojamiento";
 import GetAlojamiento from "./components/GetTipoAlojamiento";
 import Sobre from "./pages/Nosotros";
 import Home from "./pages/Home";
-import Propietarios from './pages/Propietarios.jsx'
-import Admin from './pages/Admin'
+import Propietarios from './pages/Propietarios.jsx';
+import Admin from './pages/Admin';
+import Contactos from "./pages/Contactos.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -26,6 +27,7 @@ function App() {
         <Route path="/vertipoalojamiento" element={<GetAlojamiento />} />
         <Route path="/nosotros" element={<Sobre />} />
         <Route path="/login" element={<Admin />} />
+        <Route path="/contactos" element={<Contactos/>} />        
       </Routes>
       <Footer />
     </BrowserRouter>

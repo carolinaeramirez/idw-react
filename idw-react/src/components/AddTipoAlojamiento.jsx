@@ -1,5 +1,6 @@
 import React,{useState} from "react";
 import axios from "axios";
+import "../styles/estilos.css";
 
 
 export default function AddTipoAlojamiento() {
@@ -30,16 +31,18 @@ export default function AddTipoAlojamiento() {
   };
 
   return <div>
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="login-container">
       <div>
-        <label>Descripción:</label>
+        <label>Agrega un tipo de Hospedaje:  </label>
         <textarea
           name="Descripcion"
           value={tipoAlojamiento.Descripcion}
           onChange={handleChange}
         />
+        <br></br>
+        <button type="submit" className="btn" >Agregar</button>
       </div>
-      <button type="submit" >Agregar Tipo de Alojamiento</button>
+
     </form>
   </div>;
 }

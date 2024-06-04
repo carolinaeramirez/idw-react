@@ -40,7 +40,7 @@ const AddAlojamientoForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form">
       <div>
         <label>Título:</label>
         <input
@@ -133,7 +133,7 @@ const AddAlojamientoForm = () => {
           onChange={handleChange}
         />
       </div>
-      <button type="submit">Agregar Alojamiento</button>
+      <button type="submit" className="btn" > Agregar Alojamiento</button>
     </form>
   );
 };
