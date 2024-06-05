@@ -2,8 +2,8 @@
 
 
 [
-    { "id": 1, "url": "../assets/img/cabaña.jpg", "alt": "Image","name": "Cabaña" },
-    { "id": 2, "url": "../assets/img/cabaña1.jpg", "alt": "Image","name": "Cabaña" },
+    { "id": 1, "src": "../assets/img/cabaña.jpg", "alt": "Imagen","name": "Imagen" },
+    { "id": 2, "src": "../assets/img/cabaña1.jpg", "alt": "Image","name": "Cabaña" },
     { "id": 3, "src": "../assets/img/casa.jpg", "alt": "Image", "name": "Casa" },
     { "id": 4, "src": "../assets/img/dpto.jpg", "alt": "Image", "name": "Dpto" },
     { "id": 5, "src": "../assets/img/dpto1.jpg", "alt": "Image", "name": "Dpto"},

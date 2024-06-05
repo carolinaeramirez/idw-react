@@ -12,9 +12,11 @@ export default function Propietarios() {
         <h4>Te gustaria poner tu casa en alquiler temporal?</h4>
         <p>este es el lugar indicado, dejanos tus datos en el siguiente formularios y te contactamos</p>
         </div>
-        <div className='container-form'>        
+        <div className='main-formi'>
+        <div className='formi'>        
       <AddAlojamientoForm/>
       </div>
     </div>
+  </div>
   )
 }
