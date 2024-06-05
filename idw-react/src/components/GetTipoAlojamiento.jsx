@@ -82,7 +82,6 @@ export default function GetTipoAlojamiento() {
                         <button onClick={() => eliminar(tipo.idTipoAlojamiento)}>eliminar</button>
                     </td>
                         </tr>
-                        
                     ))}
                     
                 </tbody>

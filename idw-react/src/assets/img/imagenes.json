@@ -2,12 +2,14 @@
 
 
 [
-    { "id": 1, "src": "../assets/img/cabaña.jpg", "alt": "Image 1", "name": "Cabaña" },
-    {
-      "id": 2,
-      "name": "Casa",
-      "src": "dpto.jpg",
-      "alt": "Casa con jardín"
-  }
-  
+    { "id": 1, "url": "../assets/img/cabaña.jpg", "alt": "Image","name": "Cabaña" },
+    { "id": 2, "url": "../assets/img/cabaña1.jpg", "alt": "Image","name": "Cabaña" },
+    { "id": 3, "src": "../assets/img/casa.jpg", "alt": "Image", "name": "Casa" },
+    { "id": 4, "src": "../assets/img/dpto.jpg", "alt": "Image", "name": "Dpto" },
+    { "id": 5, "src": "../assets/img/dpto1.jpg", "alt": "Image", "name": "Dpto"},
+    { "id": 6, "src": "../assets/img/hotel1.jpg", "alt": "Image", "name": "Hotel" },
+    { "id": 7, "src": "../assets/img/hotel2.jpg", "alt": "Image", "name": "Hotel" },
+    { "id": 8, "src": "../assets/img/hotel3.jpg", "alt": "Image", "name": "Hotel" },
+    { "id": 9, "src": "../assets/img/hotel.jpg", "alt": "Image", "name": "Hotel" }  
+   
   ]
